@@ -1,9 +1,16 @@
-<!DOCTYPE html>
-<html lang="no">
-    <head>
-        <meta charset="utf-8">
-        <title>Florus</title>
-        <script data-main="js/main" src="js/require.js"></script>
-    </head>
-    <body></body>
-</html>
+<?php
+
+/* Require footer */
+require_once 'tpl/header.php';
+
+/* Include template based on url */
+$tpl = Florus::parseUrl();
+
+if ($tpl) {
+    require_once $tpl;
+}
+
+/* Include footer */
+require_once 'tpl/footer.php';
+
+?>

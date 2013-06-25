@@ -1,0 +1,248 @@
+/**
+ * Main CSS file.
+ *
+ */
+
+/**
+ * Generic styles
+ */
+html, body {
+    background: #fafafa;
+    font-size: 14px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+/**
+ * Fonts
+ */
+h1, h2 {
+    color: #333;
+    font-family: 'Georgia', serif;
+    font-weight: normal;
+    margin-top: 0;
+}
+h1, .alpha {
+    font-size: 2.5em;
+}
+h2, .beta {
+    font-size: 2em;
+}
+h3, .gamma {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h4, .delta {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+p {
+    line-height: 160%;
+}
+
+/**
+ * Buttons
+ */
+.button {
+    background: #333;
+    border: none;
+    box-shadow: none;
+    font-size: .9em;
+    font-weight: 200;
+}
+    .button:hover {
+        background: #9f5b5e;
+    }
+
+
+/**
+ * Separator
+ */
+.separator {
+    border-top: 1px solid #dcdcdc;
+    display: block;
+    height: 20px;
+    margin: 40px 0;
+    position: relative;
+    width: 100%;
+}
+    .separator i {
+        background: url('../img/graphics/leaf.png') no-repeat center center #fafafa;
+        height: 14px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: -8px;
+        width: 30px;
+    }
+
+/**
+ * Structure
+ */
+.page {
+    margin-top: 40px;
+}
+
+/**
+ * Header
+ */
+header.main {
+    background: url('../img/graphics/header.jpg') no-repeat center top;
+    box-shadow: 0 5px 10px #333;
+    position: relative;
+}
+    /* Logo */
+    header.main .logo {
+        padding: 40px 0;
+    }
+    /* Navigation */
+    header.main .navigation {
+        background: rgba(159,91,94,0.5);
+        border-top: 1px solid #ffc2cd;
+        font-family: 'Georgia';
+        width: 100%;
+    }
+        header.main .navigation li {
+            float: left;
+        }
+            header.main .navigation li a {
+                color: #333;
+                display: block;
+                font-size: 1.2em;
+                padding: .3em 2em;
+            }
+            header.main .navigation li:first-child a {
+                padding-left: 0;
+            }
+            header.main .navigation li.active a {}
+    /* Sticky navigation */
+    .sticky-nav header.main .navigation {
+        background: rgba(159,91,94,0.9);
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+        .sticky-nav header.main .navigation a {}
+
+/**
+ * Quote
+ */
+.quote{
+    background: url('../img/graphics/tweed.png');
+    border-bottom: 1px solid #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+    .quote > p {
+        color: #333;
+        font-family: 'Georgia', serif;
+        font-size: 1.5em;
+        font-style: italic;
+        margin: 0;
+        text-shadow: 0 1px #666;
+    }
+    .quote a {
+        font-size: 14px;
+    }
+
+/**
+ * Products - list
+ */
+.products-list {
+    overflow: hidden;
+}
+    .products-list .product {
+        overflow: hidden;
+        position: relative;
+    }
+    .products-list .product:last-child {
+        float: left;
+    }
+        .products-list .product .content {
+            background: #fff;
+            border-radius: 50px;
+        }
+        .products-list .product .image {
+            border-radius: 10px;
+            max-height: 150px;
+            margin-bottom: 10px;
+            min-height: 150px;
+            overflow: hidden;
+            transition: .5s;
+        }
+            .products-list .product .image img {
+                max-width: 100%;
+            }
+        .products-list .product .text {
+            color: #333;
+            line-height: 120%;
+            margin: 0;
+            padding: 10px;
+            position: absolute;
+            transition: .5s;
+            top: -100%;
+        }
+        .products-list .product .price {
+            background: #ebcbd1;
+            display: block;
+            padding: 5px;
+            text-align: center;
+        }
+        .products-list .product .button {
+            display: block;
+        }
+        .products-list .product .cart.button {
+            background: #fff6a6;
+            color: #000;
+        }
+    /* Hover state */
+    .products-list .product:hover .text {
+        top: 125px;
+    }
+
+/**
+ * Sidebar
+ */
+.sidebar {}
+    .sidebar .box {
+        margin-bottom: 30px;
+    }
+        .sidebar .box h2 {}
+    /* Buttons */
+    .sidebar .button {
+        background: none;
+        display: block;
+        margin: 0;
+    }
+    .sidebar .button.facebook {
+
+    }
+    .sidebar .button.instagram {
+    }
+    /* Categories */
+    .sidebar .categories {}
+        .sidebar .categories li {}
+    /* Blog */
+    .sidebar .blog {}
+        .sidebar .blog li {
+            margin-bottom: 10px;
+        }
+            .sidebar .blog li a {
+                display: block;
+            }
+            .sidebar .blog li .date {
+                color: #ccc;
+                font-size: .9em;
+            }
+
+/**
+ * Footer
+ */
+footer {
+    color: #999;
+    padding: 20px 0;
+    text-align: center;
+}

@@ -33,6 +33,23 @@
             $(document).foundation();
         });
 
+        /**
+         * Sticky menu
+         */
+        require(['misc'], function (events) {
+            events.stickyMenu();
+        });
+
+        /**
+         * Add to cart
+         */
+        var button = $('.product .button');
+        if (button.length > 0) {
+            require(['misc'], function (events) {
+                events.addToCart(button);
+            });
+        }
+
     });
 
 }) (window.requirejs);
