@@ -4,10 +4,10 @@
 require_once 'tpl/header.php';
 
 /* Include template based on url */
-$tpl = Florus::parseUrl();
+$tpl = Florus::parseUrl('p');
 
-if ($tpl) {
-    require_once $tpl;
+if ($tpl && file_exists('tpl/' . $tpl . '.php')) {
+    require_once 'tpl/' . $tpl . '.php';
 }
 
 /* Include footer */

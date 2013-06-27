@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The icon can be used freely in both personal and commercial projects with no attribution required, but always appreciated.
+You may NOT sub-license, resell, rent, redistribute or otherwise transfer the icon without express written permission from iconmonstr.com -->
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="25px" height="25px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<path id="basket-6-icon" d="M245.146,217.642c-10.573-6.488-13.897-20.369-7.41-30.943l52.608-86.314
+	c6.639-10.82,20.547-13.791,30.945-7.412c10.574,6.489,13.898,20.371,7.41,30.945l-52.609,86.314
+	C269.451,221.052,255.543,224.021,245.146,217.642z M462,216.063v40h-11.014c-9.182,0-17.559,5.238-21.578,13.492L355,422.354
+	H157.334L82.602,269.521c-4.027-8.234-12.395-13.457-21.561-13.457H50v-40h157.486c7.624,21.479,27.787,34.904,49.41,34.904
+	c32.949,0,45.152-25.685,50.771-34.904H462z M213.25,295.077c0-6.902-5.597-12.5-12.5-12.5s-12.5,5.598-12.5,12.5v71.557
+	c0,6.902,5.597,12.5,12.5,12.5s12.5-5.598,12.5-12.5V295.077z M269.25,295.077c0-6.902-5.598-12.5-12.5-12.5
+	c-6.903,0-12.5,5.598-12.5,12.5v71.557c0,6.902,5.597,12.5,12.5,12.5c6.902,0,12.5-5.598,12.5-12.5V295.077z M325.166,295.077
+	c0-6.902-5.596-12.5-12.5-12.5c-6.902,0-12.5,5.598-12.5,12.5v71.557c0,6.902,5.598,12.5,12.5,12.5c6.904,0,12.5-5.598,12.5-12.5
+	V295.077z"/>
+</svg>
