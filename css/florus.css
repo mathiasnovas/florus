@@ -380,14 +380,12 @@ header.main {
             background: #fff;
         }
         .products-list .product .image {
-            height: 120px;
-            max-height: 150px;
             margin-bottom: 10px;
             overflow: hidden;
             transition: .5s;
         }
             .products-list .product .image img {
-                max-width: 100%;
+                width: 100%;
             }
         .products-list .product .text {
             color: #333;
@@ -598,6 +596,18 @@ header.main {
         .purchase .status li.current .code {
             background: #ccc;
         }
+    /* Mobile */
+    @media only screen and(max-width: 767px) {
+        .purchase .status li {
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            width: 25%;
+        }
+        .purchase .status p {
+            display: none;
+        }
+    }
 
 /**
  * Footer
