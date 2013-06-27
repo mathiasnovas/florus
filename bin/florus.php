@@ -30,6 +30,23 @@ class Florus {
     }
 
     /**
+     * Get page title
+     * @return string
+     */
+    public static function getPageTitle() {
+        $identifier = self::parseUrl('p');
+        $title = '';
+
+        foreach (self::tree() as $key => $page) {
+            if ($key == $identifier) {
+                $title = $page;
+            }
+        }
+
+        return $title;
+    }
+
+    /**
      * Fetch products
      * @return array
      */
