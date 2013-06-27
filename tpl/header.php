@@ -1,10 +1,11 @@
 <?php require_once 'bin/florus.php';?>
 <!DOCTYPE html>
-<html lang="no">
+<!--[if lt IE 9 ]> <html class="lt-ie9"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="no"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Florus</title>
+    <title>Florus - <?php echo Florus::getPageTitle(); ?></title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/florus.css">
