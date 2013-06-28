@@ -1,5 +1,5 @@
 <?php
-    $searchString = Florus::parseUrl('s');
+    $searchString = strtolower(Florus::parseUrl('s'));
     $products = Florus::getProductsByTag(array($searchString));
 ?>
 <div class="row page">
