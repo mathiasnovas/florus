@@ -29,7 +29,7 @@
             <?php } ?>
         </ul>
 
-        <form class="validate" action="<?php echo $PHP_SELF; ?>" method="post">
+        <form class="validate" action="<?php echo $SERVER['PHP_SELF']; ?>" method="post">
             <input type="hidden" name="status" value="<?php echo $status + 1; ?>">
 
             <?php require_once 'tpl/parts/purchase/stage' . $status . '.php'; ?>
