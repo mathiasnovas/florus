@@ -1,23 +1,20 @@
 <?php
-
-$products = Florus::getProducts(4);
-
+    $products = new Florus;
 ?>
-
 <div class="feature">
     <div class="wrap">
         <ul data-orbit data-options="bullets: false; timer_speed: 4000;pause_on_hover: false;">
             <li>
                 <img src="img/slides/slide1.jpg" alt="">
-                <div class="orbit-caption">Nye, elegante buketter til bryllup!</div>
+                <div class="orbit-caption"><a href="/?p=products&t[]=bukett">Nye, elegante buketter til bryllup!</a></div>
             </li>
             <li>
                 <img src="img/slides/slide2.jpg" alt="">
-                <div class="orbit-caption">TIlbud på borddekorasjoner</div>
+                <div class="orbit-caption"><a href="/?p=products&t[]=borddekorasjon">TIlbud på borddekorasjoner</a></div>
             </li>
             <li>
                 <img src="img/slides/slide3.jpg" alt="">
-                <div class="orbit-caption">Ikke glem blomster til sommeren!</div>
+                <div class="orbit-caption"><a href="/?p=products&t[]=hvit">Ikke glem blomster til sommeren!</a></div>
             </li>
         </ul>
     </div>
@@ -32,7 +29,7 @@ $products = Florus::getProducts(4);
             <div class="products-list row">
 
                 <?php
-                    foreach($products as $product) {
+                    foreach($products->getProducts(4) as $product) {
                         include 'tpl/parts/product.php';
                     }
                 ?>
@@ -46,7 +43,7 @@ $products = Florus::getProducts(4);
             <h1 class="beta">Populære</h1>
             <div class="products-list row">
                 <?php
-                    foreach($products as $product) {
+                    foreach($products->getProducts(4, 4) as $product) {
                         include 'tpl/parts/product.php';
                     }
                 ?>
@@ -59,7 +56,7 @@ $products = Florus::getProducts(4);
             <h1 class="beta">Nye</h1>
             <div class="products-list row">
                 <?php
-                    foreach($products as $product) {
+                    foreach($products->getProducts(4, 2) as $product) {
                         include 'tpl/parts/product.php';
                     }
                 ?>

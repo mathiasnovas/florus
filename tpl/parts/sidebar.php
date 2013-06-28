@@ -34,9 +34,10 @@
 
         <div class="columns large-12 small-6 box newsletter">
             <h2>Nyhetsbrev</h2>
-            <form action="">
-                <input type="email" placeholder="blomster@finn.no">
-                <input type="submit" value="Meld meg på" class="button">
+            <form action="" class="validate">
+                <label for="email" class="required">E-post:</label>
+                <input type="email" id="email" name="email" placeholder="blomster@finn.no">
+                <input type="submit" value="Meld meg på" class="button next" disabled>
             </form>
         </div>
 
