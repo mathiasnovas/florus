@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/florus.css">
     <script src="js/vendor/modernizr.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ5lYTWgpHcp8b5OUKOlYlCn1oHlpIdbM&sensor=true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ5lYTWgpHcp8b5OUKOlYlCn1oHlpIdbM&amp;sensor=true"></script>
     <script data-main="js/main" src="js/require.js"></script>
 </head>
 <body class="<?php echo Florus::parseUrl('p'); ?>">
