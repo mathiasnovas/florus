@@ -38,18 +38,18 @@ define(['jquery'], function () {
 
             if (objs.length > 0) {
                 $.each(objs, function () {
-                    var obj = this;
-                        image = obj['image'].split('.');
+                    var obj = this,
+                        image = obj.name.split('.'),
                         imagePath = image[0] + '_thumb.' + image[1];
 
                     var container = $('<div>', {
                         'class': 'product columns large-3 small-6',
-                        'html': '<div class="content"><a href="/?p=product&n=' + obj['name'].toLowerCase() + '"><figure class="image"><img src="' + imagePath +'"></figure></a></div>'
+                        'html': '<div class="content"><a href="/?p=product&n=' + obj.name.toLowerCase() + '"><figure class="image"><img src="' + imagePath +'"></figure></a></div>'
                     });
 
                     var info = $('<div>', {
                         'class': 'info',
-                        'html': '<p class="text">' + obj['name'] + '</p><div class="price">Fra nok ' + obj['price'][0] + '-,</div><div class="button add">Kjøp</div>'
+                        'html': '<p class="text">' + obj.name + '</p><div class="price">Fra nok ' + obj.price[0] + '-,</div><div class="button add">Kjøp</div>'
                     });
 
                     container.find('.content').append(info);
@@ -59,7 +59,7 @@ define(['jquery'], function () {
                     $(dom).append(html);
                 });
             } else {
-                $(dom).html('<div class="message">Beklager, vi har ingen prdukter som matcher filtreringen.</div>')
+                $(dom).html('<div class="message">Beklager, vi har ingen prdukter som matcher filtreringen.</div>');
             }
         }
 
