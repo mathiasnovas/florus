@@ -13,19 +13,21 @@
      */
     require.config({
         paths: {
-            jquery: 'vendor/jquery'
+            jquery: [
+                '//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min',
+                'vendor/jquery'
+            ]
         },
         shim: {
             'foundation/foundation.orbit': {
                 deps: ['foundation/foundation']
+            },
+            'vendor/jquery-ui': {
+                deps: ['jquery']
             }
         }
     });
 
-    /**
-     * Modernizr
-     */
-    require(['vendor/modernizr']);
 
     /**
      * Functions
@@ -41,9 +43,9 @@
                 $(document).foundation();
             });
 
-            /**
-             * Sticky menu
-             */
+            // /**
+            //  * Sticky menu
+            //  */
             if ($(window).width() > 767) {
                 require(['misc'], function (events) {
                     events.stickyMenu();
@@ -78,7 +80,7 @@
             }
 
             /**
-             * Remove from chart
+             * Remove from cart
              */
             var removeButton = $('.product .remove');
             if (removeButton.length > 0) {
@@ -91,9 +93,19 @@
              * Change size
              */
             var sizes = $('.size div');
-            if (sizes) {
+            if (sizes.length > 0) {
                 require(['misc'], function (events) {
                     events.changeSize(sizes);
+                });
+            }
+
+            /**
+             * Get sum
+             */
+            var products = $('.cart .product');
+            if (products.length > 0) {
+                require(['misc'], function (events) {
+                    events.getSum(products);
                 });
             }
 
@@ -108,6 +120,16 @@
             }
 
             /**
+             * Datepicker
+             */
+            var date = $('.datepicker');
+            if (date.length > 0) {
+                require(['vendor/jquery-ui'], function () {
+                    date.datepicker();
+                });
+            }
+
+            /**
              * Form validation
              */
             if ($('.validate').length > 0) {
@@ -115,17 +137,28 @@
 
                     /* Postal code */
                     var postalCodeField = $('#postal_code');
-                    if (postalCodeField) {
+                    if (postalCodeField.length > 0) {
                         validate.postalCode(postalCodeField);
                     }
 
                     /* Billing info */
                     var billingInfo = $('#billing_address');
-                    if (billingInfo) {
-                        validate.billingInfo();
+                    if (billingInfo.length > 0) {
+                        validate.generic('');
+                    }
+
+                    /* Newsletter */
+                    var newsletter = $('.newsletter');
+                    if (newsletter.length > 0) {
+                        validate.generic('Du vil høre fra oss!');
                     }
 
                 });
+            }
+
+            /* Email field */
+            if (!Modernizr.inputtypes.email) {
+                // console.log('hey');
             }
 
             /**

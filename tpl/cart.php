@@ -8,6 +8,7 @@
                 <?php foreach (Florus::getProducts(3) as $product) { ?>
                     <?php include 'tpl/parts/list_product.php'; ?>
                 <?php } ?>
+                <div class="sum columns large-12"></div>
             </div>
 
             <div class="actions">
