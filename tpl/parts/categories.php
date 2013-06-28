@@ -10,7 +10,7 @@ $currentTags = ($tags ? $tags : array());
             <ul class="sub">
                 <?php foreach ($subCategories as $category) { ?>
                     <li <?php echo (in_array(strtolower($category), $currentTags) ? 'class="active"' : '') ?>>
-                        <a href="<?php echo '?p=products&t[]=' . strtolower($category) ?>">
+                        <a class="tag" href="<?php echo '?p=products&t[]=' . strtolower($category) ?>">
                             <?php echo $category; ?>
                         </a>
                     </li>
@@ -18,4 +18,7 @@ $currentTags = ($tags ? $tags : array());
             </ul>
         </li>
     <?php } ?>
+    <li class="clear">
+        <a href="/?p=products">Alle</a>
+    </li>
 </ul>

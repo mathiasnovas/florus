@@ -19,7 +19,7 @@
         </a>
         <div class="info">
             <p class="text"><?php echo $product['name']; ?></p>
-            <div class="price"><?php echo 'Fra nok ' . $product['price'][0] . '-,'; ?></div>
+            <div class="price"><?php echo 'nok ' . $product['price'][0] . '-,'; ?></div>
             <div class="actions">
                 <div class="button remove">Fjern</div>
                 <div class="button link"><a href="/?p=purchase">Kjøp</a></div>

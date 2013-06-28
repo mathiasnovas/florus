@@ -7,7 +7,7 @@
     <section class="columns large-12">
         <h1>Kontakt</h1>
 
-        <p>Vi vil gjerne høre fra deg!</p>
+        <p>Vi hører gjerne fra deg!</p>
 
         <p>
             <strong>Tlf:</strong> 41331382 <br>

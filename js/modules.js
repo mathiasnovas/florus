@@ -7,7 +7,7 @@ define(['jquery'], function () {
          * @param jQuery-object
          */
         getProducts: function (categories) {
-            categories.on('click', 'li a', function (e) {
+            categories.on('click', '.tag', function (e) {
                 e.preventDefault();
                 var category = $(this).html().replace(/\n| /g, '').toLowerCase();
 
@@ -20,9 +20,6 @@ define(['jquery'], function () {
                     success: function (data) {
                         var products = $.parseJSON(data);
                         modules.render(products, '.products-list');
-                    },
-                    error: function (a,b,c) {
-                        console.log(a,b,c);
                     }
                 });
 
@@ -41,7 +38,7 @@ define(['jquery'], function () {
 
             if (objs.length > 0) {
                 $.each(objs, function () {
-                    var obj = $(this)[0];
+                    var obj = this;
                         image = obj['image'].split('.');
                         imagePath = image[0] + '_thumb.' + image[1];
 

@@ -1,14 +1,17 @@
 <?php require_once 'bin/florus.php';?>
-<!DOCTYPE html>
+<!doctype html>
 <!--[if lt IE 9 ]> <html class="lt-ie9"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="no"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Florus - <?php echo Florus::getPageTitle(); ?></title>
+    <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/florus.css">
+    <script src="js/vendor/modernizr.js"></script>
     <?php if (Florus::parseUrl('p') == 'contact') { ?>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ5lYTWgpHcp8b5OUKOlYlCn1oHlpIdbM&sensor=true"></script>
     <?php } ?>

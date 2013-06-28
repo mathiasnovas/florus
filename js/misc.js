@@ -3,7 +3,7 @@
  * Anything more advanced should have its own file.
  */
 
-define(['jquery'], function () {
+define(['jquery'], function ($) {
 
     var events = {
 
@@ -12,21 +12,21 @@ define(['jquery'], function () {
          */
         stickyMenu: function () {
             var $window = $(window),
-               $sticky_element = $('nav.main'),
-               $sticky_element_offset = $sticky_element.offset().top;
+               stickyElementOffset = document.querySelector('nav.main').offsetTop,
+               body = $('body');
 
-           $window.scroll(function() {
-                $('body').toggleClass('sticky-nav', $window.scrollTop() > $sticky_element_offset);
+            $window.scroll(function() {
+                body.toggleClass('sticky-nav', $window.scrollTop() > stickyElementOffset);
             });
 
-            $('body').toggleClass('sticky-nav', $window.scrollTop() > $sticky_element_offset);
+            body.toggleClass('sticky-nav', $window.scrollTop() > stickyElementOffset);
         },
 
         /**
          * Mobile menu
          */
         mobileMenu: function () {
-            trigger = $('.mobile');
+            var trigger = $('.mobile');
 
             trigger.on('click', function (e) {
                 e.preventDefault();
@@ -90,11 +90,15 @@ define(['jquery'], function () {
 
             if (products.length == 0) {
                 $('.products-list').html('<div class="message">Du har ingen varer i handlekurven.</div>');
+                $('.actions').remove();
             }
+
+            events.getSum(products);
         },
 
         /**
          * Change size
+         * @param jQuery-object
          */
         changeSize: function (sizes) {
             sizes.on('click', function () {
@@ -113,6 +117,21 @@ define(['jquery'], function () {
                     el.addClass('active');
                 }
             });
+        },
+
+        /**
+         * Get sum of products in a list
+         * @param jQuery-object
+         */
+        getSum: function (products) {
+            var sum = 0;
+            $.each(products, function () {
+                var price = parseInt( $(this).find('.price').html().replace(/\D/g, '') );
+                sum = sum + price;
+            });
+            if (sum > 0) {
+                $('.sum').html('Sum: ' + sum);
+            }
         }
 
     }

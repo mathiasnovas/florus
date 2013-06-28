@@ -10,7 +10,7 @@
 <textarea name="" id="card_text" cols="30" rows="10"></textarea>
 
 <label class="required" for="delivery_time">Ønsket Leveringsditspunkt</label>
-<input type="date" id="delivery_time" name="delivery_time">
+<input class="datepicker" type="text" id="delivery_time" name="delivery_time">
 
 <label for="special_instructions">Spesielle instruksjoner for levering</label>
 <textarea name="special_instructions" id="special_instructions" cols="30" rows="10"></textarea>
