@@ -50,36 +50,32 @@ class Florus {
      * Fetch products
      * @return array
      */
-    public static function getProducts($count = 10) {
+    public static function getProducts($count = 60, $offset = 0) {
         $products = array(
             array(
                 'name' => 'Roser',
-                'tag' => array( 'roser', 'rosa', 'bursdag' ),
-                'type' => 'bukett',
+                'tag' => array( 'bukett', 'roser', 'rosa', 'bursdag' ),
                 'image' => 'img/products/roser.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('750', '850')
             ),
             array(
                 'name' => 'Liljer',
-                'tag' => array( 'liljer', 'rød', 'gratulerer' ),
-                'type' => 'bukkett',
+                'tag' => array( 'bukett', 'liljer', 'rød', 'gratulerer' ),
                 'image' => 'img/products/liljer.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('800', '900')
             ),
             array(
                 'name' => 'Peoner',
-                'tag' => array( 'peoner', 'rosa', 'kjærlighet' ),
-                'type' => 'bukkett',
+                'tag' => array( 'bukett', 'peoner', 'rosa', 'kjærlighet' ),
                 'image' => 'img/products/peoner.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('790', '890')
             ),
             array(
                 'name' => 'Kondolanse',
-                'tag' => array( 'roser', 'hvit', 'kondolanse' ),
-                'type' => 'bukkett',
+                'tag' => array( 'roser', 'hvit', 'kondolanse', 'orkideer' ),
                 'image' => 'img/products/hvit_blanding.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('790', '890')
@@ -87,23 +83,48 @@ class Florus {
             array(
                 'name' => 'Gratulerer',
                 'tag' => array('roser', 'rosa', 'hvit', 'gratulerer'),
-                'type' => 'bukett',
                 'image' => 'img/products/rosa_blanding.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('850', '950')
             ),
             array(
                 'name' => 'Dåp',
-                'tag' => array('dåp', 'lilla', 'rosa'),
-                'type' => 'bukett',
+                'tag' => array('dåp', 'lilla', 'rosa', 'nelliker'),
                 'image' => 'img/products/lilla.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('800', '900')
             ),
             array(
+                'name' => 'Bryllup',
+                'tag' => array('bryllup', 'hvit', 'lilla', 'borddekorasjon', 'blå'),
+                'image' => 'img/products/hvit_lilla.jpg',
+                'text' => 'Lorem ipsum dolor sit amet',
+                'price' => array('720', '1000')
+            ),
+            array(
+                'name' => 'Kondolanse',
+                'tag' => array('kondolanse', 'bukket', 'lilla', 'grønn', 'blå'),
+                'image' => 'img/products/lilla_blanding.jpg',
+                'text' => 'Lorem ipsum dolor sit amet',
+                'price' => array('890', '1200')
+            ),
+            array(
+                'name' => 'Takk',
+                'tag' => array('takk', 'rosa', 'roser', 'bukett'),
+                'image' => 'img/products/rosa.jpg',
+                'text' => 'Lorem ipsum dolor sit amet',
+                'price' => array('1200', '1400')
+            ),
+            array(
+                'name' => 'Dagen er din',
+                'tag' => array('gratulerer', 'bursdag', 'rød', 'lilla', 'borddekorasjon', 'potteplante'),
+                'image' => 'img/products/rød_lilla.jpg',
+                'text' => 'Lorem ipsum dolor sit amet',
+                'price' => array('760', '900')
+            ),
+            array(
                 'name' => 'Gaveinnpakning',
                 'tag' => array('gave', 'extra'),
-                'type' => '',
                 'image' => 'img/products/gift.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('100')
@@ -111,7 +132,6 @@ class Florus {
             array(
                 'name' => 'Gaveeske',
                 'tag' => array('gave', 'extra'),
-                'type' => '',
                 'image' => 'img/products/gift_box.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('200')
@@ -119,7 +139,6 @@ class Florus {
             array(
                 'name' => 'Konfekt',
                 'tag' => array('extra'),
-                'type' => '',
                 'image' => 'img/products/chocolates.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('340')
@@ -127,7 +146,6 @@ class Florus {
             array(
                 'name' => 'Duftlys',
                 'tag' => array('extra'),
-                'type' => '',
                 'image' => 'img/products/candles.jpg',
                 'text' => 'Lorem ipsum dolor sit amet',
                 'price' => array('80')
@@ -137,8 +155,10 @@ class Florus {
 
         $i = 0;
         foreach ($products as $product) {
-            if ($i < $count) {
-                $array[] = $product;
+            if ($i < ($count + $offset)) {
+                if ($i >= $offset) {
+                    $array[] = $product;
+                }
                 $i++;
             }
         }
@@ -183,7 +203,7 @@ class Florus {
     public static function getCategories() {
         $categories = array(
             'Anledninger' => array(
-                'Bursdag', 'Firmagaver', 'Gratulerer', 'Takk', 'Kondolanse', 'Kjærlighet'
+                'Bursdag', 'Gratulerer', 'Takk', 'Kondolanse', 'Kjærlighet'
             ),
             'Blomster' => array(
                 'Peoner', 'Orkideer', 'Roser', 'Liljer', 'Nelliker'
