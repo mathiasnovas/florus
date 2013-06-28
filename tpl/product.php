@@ -44,11 +44,9 @@ $product = Florus::currentPage($pid);
             <h1 class="beta">Tilleggsprodukter</h1>
 
             <div class="products-list row">
-                <?php
-                    foreach (Florus::getProductsByTag(array('extra')) as $product) {
-                        include 'tpl/parts/product.php';
-                    } 
-                ?>
+                <?php foreach (Florus::getProductsByTag(array('extra')) as $product) { ?>
+                    <?php include 'tpl/parts/product.php'; ?>
+                <? } ?>
             </div>
         </article>
 

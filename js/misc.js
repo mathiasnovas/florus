@@ -88,7 +88,7 @@ define(['jquery'], function ($) {
                 events.removeFromCart();
             });
 
-            if (products.length == 0) {
+            if (products.length === 0) {
                 $('.products-list').html('<div class="message">Du har ingen varer i handlekurven.</div>');
                 $('.actions').remove();
             }
@@ -126,7 +126,7 @@ define(['jquery'], function ($) {
         getSum: function (products) {
             var sum = 0;
             $.each(products, function () {
-                var price = parseInt( $(this).find('.price').html().replace(/\D/g, '') );
+                var price = parseInt( $(this).find('.price').html().replace(/\D/g, ''), 10 );
                 sum = sum + price;
             });
             if (sum > 0) {

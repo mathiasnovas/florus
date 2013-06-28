@@ -13,7 +13,8 @@
                     å tilby våre produkter for et bredere publikum.</p>
 
                 <h4>Florus i dag</h4>
-                <p>Vi kommer til å ha et fast inventar av buketter til rekke anledninger framover. Vi ønsker også å ekspandere vårt leveringsareal, som for
+                <p>Vi kommer til å ha et fast inventar av buketter til rekke anledninger framover. <strong>Smak, kunnskap og kvalitet</strong> er det du kan forvente av oss.
+                    Vi ønsker også å ekspandere vårt leveringsareal, som for
                     øyeblikket er begrenset til kunder på Østlandet.</p>
                 <p>Vi ønsker deg en rask og trygg handel! Og husk: Frakt er alltid gratis!</p>
             </div>

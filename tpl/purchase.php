@@ -1,9 +1,7 @@
 <?php
     // Logic for finding status for form
-    if ($_POST['prev']) {
+    if ((isset($_POST['prev']))) {
         $status = $_POST['status'] - 2;
-    } else if ($_POST['cancel']) {
-        $status = 1;
     } else {
         $status = (isset($_POST['status']) ? $_POST['status'] : '1');
     }
@@ -29,7 +27,7 @@
             <?php } ?>
         </ul>
 
-        <form class="validate" action="<?php echo $SERVER['PHP_SELF']; ?>" method="post">
+        <form class="validate" action="/?p=purchase" method="post">
             <input type="hidden" name="status" value="<?php echo $status + 1; ?>">
 
             <?php require_once 'tpl/parts/purchase/stage' . $status . '.php'; ?>

@@ -123,7 +123,7 @@
              * Datepicker
              */
             var date = $('.datepicker');
-            if (date.length > 0) {
+            if (date.length > 0 && !Modernizr.inputtypes.date) {
                 require(['vendor/jquery-ui'], function () {
                     date.datepicker();
                 });
@@ -154,11 +154,6 @@
                     }
 
                 });
-            }
-
-            /* Email field */
-            if (!Modernizr.inputtypes.email) {
-                // console.log('hey');
             }
 
             /**

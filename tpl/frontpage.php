@@ -5,16 +5,16 @@
     <div class="wrap">
         <ul data-orbit data-options="bullets: false; timer_speed: 4000;pause_on_hover: false;">
             <li>
+                <img src="img/slides/slide3.jpg" alt="">
+                <div class="orbit-caption"><a href="/?p=products&amp;t[]=hvit">Ikke glem blomster til sommeren!</a></div>
+            </li>
+            <li>
                 <img src="img/slides/slide1.jpg" alt="">
-                <div class="orbit-caption"><a href="/?p=products&t[]=bukett">Nye, elegante buketter til bryllup!</a></div>
+                <div class="orbit-caption"><a href="/?p=products&amp;t[]=bukett">Nye, elegante buketter til bryllup!</a></div>
             </li>
             <li>
                 <img src="img/slides/slide2.jpg" alt="">
-                <div class="orbit-caption"><a href="/?p=products&t[]=borddekorasjon">TIlbud på borddekorasjoner</a></div>
-            </li>
-            <li>
-                <img src="img/slides/slide3.jpg" alt="">
-                <div class="orbit-caption"><a href="/?p=products&t[]=hvit">Ikke glem blomster til sommeren!</a></div>
+                <div class="orbit-caption"><a href="/?p=products&amp;t[]=borddekorasjon">TIlbud på borddekorasjoner</a></div>
             </li>
         </ul>
     </div>

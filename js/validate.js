@@ -72,6 +72,9 @@ define(['jquery'], function ($) {
                 },
                 focus: function () {
                     checkField($(this));
+                },
+                change: function () {
+                    checkField($(this));
                 }
             });
 

@@ -12,7 +12,7 @@
 ?>
 <div class="product columns large-3 small-6">
     <div class="content">
-        <a href="<?php echo '?p=product&n=' . strtolower($product['name']); ?>">
+        <a href="<?php echo '?p=product&amp;n=' . strtolower($product['name']); ?>">
             <figure class="image">
                 <img src="<?php echo $filePath; ?>" alt="Lorem ipsum">
             </figure>

@@ -60,6 +60,7 @@ p {
 .button {
     background: #333;
     border: none;
+    border-radius: 0 !important;
     box-shadow: none;
     font-size: .9em;
     font-weight: 200;
@@ -634,6 +635,9 @@ header.main {
                 background: #9f5b5e;
             }
     .cart .products-list .sum {
+        border-top: 1px solid #ccc;
+        margin: 10px 0;
+        padding-top: 10px;
         text-align: right;
     }
 
@@ -675,12 +679,24 @@ header.main {
     }
 
 /**
+ * Blog post
+ */
+.post .info-box {
+    margin-bottom: 20px;
+}
+
+/**
  * Footer
  */
 footer {
     color: #999;
     padding: 20px 0;
     text-align: center;
+}
+@media only screen and (max-width: 767px) {
+    footer {
+        padding: 20px 0 50px;
+    }
 }
 
 /**

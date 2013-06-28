@@ -12,10 +12,10 @@
             <h2>Sosialt</h2>
             <ul>
                 <li>
-                    <a href="">Facebook</a>
+                    <a href="http://facebook.com">Facebook</a>
                 </li>
                 <li>
-                    <a href="">Twitter</a>
+                    <a href="http://twitter.com">Twitter</a>
                 </li>
             </ul>
         </div>
@@ -25,7 +25,7 @@
             <ul>
                 <?php foreach(FLorus::getPosts() as $post) { ?>
                     <li>
-                        <a href="#"><?php echo $post['title']; ?></a>
+                        <a href="/?p=post"><?php echo $post['title']; ?></a>
                         <span class="date"><?php echo $post['date']; ?></span>
                     </li>
                 <?php } ?>
@@ -34,7 +34,7 @@
 
         <div class="columns large-12 small-6 box newsletter">
             <h2>Nyhetsbrev</h2>
-            <form action="" class="validate">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="validate">
                 <label for="email" class="required">E-post:</label>
                 <input type="email" id="email" name="email" placeholder="blomster@finn.no">
                 <input type="submit" value="Meld meg på" class="button next" disabled>
@@ -44,6 +44,7 @@
         <div class="columns large-12 small-6 box login">
             <h2>Logg inn</h2>
             <p>Velkommen, Mathias</p>
+            <a href="#">Logg ut</a>
         </div>
 
 </aside>
