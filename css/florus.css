@@ -108,11 +108,6 @@ form {}
         content: '*';
         margin-left: 2px;
     }
-.button::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner {
-    padding: 0 !important;
-    border: 0 !important;
-}
 textarea {
     max-width: 100%;
     min-width: 100%;
@@ -284,9 +279,6 @@ header.main {
             line-height: normal !important;
             padding: 6px 10px 10px;
         }
-        .quick-search input[type='submit']::-moz-focus-inner {
-            background: red;
-        }
 
 /**
  * Mobile header
@@ -389,7 +381,6 @@ header.main {
         background: none;
     }
     .feature .orbit-caption {
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#991c1c1c', endColorstr='#99131313',GradientType=0 ) !important; /* IE6-9 */
         font-size: 2em !important;
         padding: .5em 2.8em !important;
     }
@@ -508,7 +499,7 @@ header.main {
                 font-size: .9em;
             }
     /* Mobile */
-    @media only screen and(max-width: 767px) {
+    @media only screen and (max-width:767px) {
         .sidebar {
             margin-top: 40px;
         }
@@ -670,7 +661,7 @@ header.main {
             background: #ccc;
         }
     /* Mobile */
-    @media only screen and(max-width: 767px) {
+    @media only screen and (max-width:767px) {
         .purchase .status li {
             margin: 0;
             padding: 20px;
