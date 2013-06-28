@@ -23,7 +23,7 @@ define(['jquery'], function ($) {
         generic: function (message) {
             var required = $('.required').next(),
                 submit = $('.next'),
-                message = ((message.length > 0) ? message : ''),
+                text = ((message.length > 0) ? message : ''),
                 valid = false;
 
             var checkField = function (field) {
@@ -51,8 +51,8 @@ define(['jquery'], function ($) {
                     submit.attr('disabled', true);
                 }
 
-                if (message.length > 0 && valid) {
-                    validate.message(message);
+                if (text.length > 0 && valid) {
+                    validate.message(text);
                 }
             }
 
