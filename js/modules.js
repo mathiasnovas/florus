@@ -39,7 +39,7 @@ define(['jquery'], function () {
             if (objs.length > 0) {
                 $.each(objs, function () {
                     var obj = this,
-                        image = obj.name.split('.'),
+                        image = obj.image.split('.'),
                         imagePath = image[0] + '_thumb.' + image[1];
 
                     var container = $('<div>', {
